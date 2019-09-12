@@ -1,0 +1,8 @@
+sudo: required
+
+services:
+    - docker
+
+script:
+    - ./build-with-docker.sh
+    - ./build-with-docker.sh -b debian -n stretch-container -- -r stretch -a arm64 --minimal
